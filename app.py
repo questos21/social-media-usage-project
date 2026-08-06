@@ -151,11 +151,11 @@ if page=="Introduction":
  col1,col2=st.columns(2)
 
  with col1:
-  st.image(r"C:\Users\user\Documents\Documents\UNI\YEAR1 SEM2\DSA1080\social-media-usage-project\data\images\WhatsApp Image 2024-01-10 at 16.26.31_6a7057d8.jpg",width=250)
+  st.image(r"C:\Users\user\Documents\Documents\UNI\YEAR1 SEM2\DSA1080\social-media-usage-project\data\images\Screenshot 2026-08-06 112157.png",width=450)
   st.write("KAZI KIIRU 202604055")
 
  with col2:
-  st.image(r"C:\Users\user\Documents\Documents\UNI\YEAR1 SEM2\DSA1080\social-media-usage-project\data\images\WhatsApp Image 2026-08-06 at 09.33.25.jpeg",width=250)
+  st.image(r"C:\Users\user\Documents\Documents\UNI\YEAR1 SEM2\DSA1080\social-media-usage-project\data\images\WhatsApp Image 2026-08-06 at 09.33.25.jpeg",width=350)
   st.write("BRADLEY QUEST 676509")
 
  st.markdown("---")
@@ -698,59 +698,61 @@ elif page=="Analysis 8":
  Productivity is not determined simply by the amount of time spent on social media. Instead, it appears to be the combined result of an individual's work environment, occupation, digital habits and ability to manage distractions. Looking at only one variable provides an incomplete explanation; meaningful insight comes from analysing the relationships between several factors together.
  """)
 elif page=="Outro":
- st.title("🎉 Thank You!")
+ st.title("🎉 LOWKIRKENUINELY PEAK PRESENTATION")
 
  st.markdown("---")
 
- st.header("📱 Final Sign-Off")
+ st.header("🥀")
 
- st.write(
-  """
-  Over the course of this project we discovered that:
+ videoOne=r"C:\Users\user\Documents\Documents\UNI\YEAR1 SEM2\DSA1080\social-media-usage-project\data\images\WhatsApp Video 2026-08-06 at 09.34.08.mp4"
+ videoTwo=r"C:\Users\user\Documents\Documents\UNI\YEAR1 SEM2\DSA1080\social-media-usage-project\data\images\WhatsApp Video 2025-01-09 at 12.24.00_4487eead.mp4"
 
-  • Spending more time on social media did not automatically reduce productivity.
+ col1,col2=st.columns(2)
 
-  • Focus apps were not the strongest predictor of productivity.
+ with col1:
+  if os.path.exists(videoOne):
+   st.video(videoOne)
+  else:
+   st.error("Video 1 not found.")
 
-  • Notifications, occupations and other lifestyle factors all contributed to the bigger picture.
-
-  • Most importantly, data can often challenge what we assume to be true.
-
-  Thank you for following our journey!
-  """
- )
+ with col2:
+  if os.path.exists(videoTwo):
+   st.video(videoTwo)
+  else:
+   st.error("Video 2 not found.")
+   st.markdown("---")
 
  st.success(
-  "Final Message: Never trust assumptions... trust the data. 📊"
+  "🎉 Congratulations! You have officially survived our presentation."
  )
-
- st.balloons()
-
- videoPath=r"C:\Users\user\Documents\Documents\UNI\YEAR1 SEM2\DSA1080\social-media-usage-project\data\images\WhatsApp Video 2026-08-06 at 09.34.08.mp4"
-
- if os.path.exists(videoPath):
-  st.video(videoPath)
- else:
-  st.error("Video not found.")
-
- st.markdown("---")
-
- st.header("😂 Before You Leave...")
 
  st.markdown(
  """
- ### Statistics prove that...
+ ## Final Statistics
 
- We spent:
- - 10% collecting data
- - 20% cleaning data
- - 30% fixing bugs
- - 40% wondering why Streamlit wasn't updating 😭
+ 📊 Data Collected: ✔️
 
- Thanks for watching!
+ 🧹 Data Cleaned: ✔️
+
+ 📈 Data Analysed: ✔️
+
+ 😭 Streamlit Bugs Fixed: Approximately 437
+
+ ☕ Cups of Coffee Consumed: Too many to count.
  """
  )
 
+ st.balloons()
  st.snow()
 
- st.caption("Made with ❤️, Python, Pandas, Streamlit... and a questionable amount of caffeine ☕")
+ st.markdown("# 🎓 Thank You!")
+
+ st.markdown(
+ """
+ ### Questions?
+
+ If not...
+
+ Have a fantastic day! 😄
+ """
+ )
