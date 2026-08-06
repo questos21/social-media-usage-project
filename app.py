@@ -137,8 +137,64 @@ st.title("📱 Social Media vs Productivity Analysis")
 st.write("KAZI & BRADLEY: The Best Group Presentation")
 st.markdown("---")
 
-page=st.sidebar.radio("Navigate App",["Data Understanding", "Data Cleaning", "Analysis 1 & 2",
-  "Analysis 3", "Analysis 4", "Analysis 5", "Analysis 6", "Analysis 7", "Analysis 8"])
+page=st.sidebar.radio("Navigate App",["Introduction", "Data Understanding", "Data Cleaning", "Analysis 1 & 2",
+  "Analysis 3", "Analysis 4", "Analysis 5", "Analysis 6", "Analysis 7", "Analysis 8", "Outro"])
+
+if page=="Introduction":
+
+
+
+ st.markdown("---")
+
+ st.header("Project Team")
+
+ col1,col2=st.columns(2)
+
+ with col1:
+  st.image(r"C:\Users\user\Documents\Documents\UNI\YEAR1 SEM2\DSA1080\social-media-usage-project\data\images\WhatsApp Image 2024-01-10 at 16.26.31_6a7057d8.jpg",width=250)
+  st.write("KAZI KIIRU 202604055")
+
+ with col2:
+  st.image(r"C:\Users\user\Documents\Documents\UNI\YEAR1 SEM2\DSA1080\social-media-usage-project\data\images\WhatsApp Image 2026-08-06 at 09.33.25.jpeg",width=250)
+  st.write("BRADLEY QUEST 676509")
+
+ st.markdown("---")
+
+ st.header("Project Information")
+
+ st.markdown("""
+ **Course:** DSA1080
+
+ **University:** ___USIU____________________
+
+ **Lecturer:** _______AUSTIN ODERO________________
+
+ **Semester:** _________DSA1080______________
+
+ **Project Title:** *Social Media vs Productivity: Does Social Media Really Reduce Productivity?*
+
+ **Submitted By:**
+ - Kazi Kiiru
+ - Bradley Quest
+ """)
+
+ st.markdown("---")
+
+ st.header("Project Overview")
+
+ st.write(
+  """
+  Social media is often blamed for reducing productivity. This project
+  investigates whether time spent on social media is actually associated with
+  lower productivity, or whether other factors such as focus apps,
+  notifications and occupation provide a better explanation.
+
+  Throughout this dashboard we answer eight connected analysis questions,
+  gradually building towards **Kazi's Final Thesis**.
+  """
+ )
+
+ st.info("Use the navigation menu on the left to begin the analysis.")
 
 if page == "Data Understanding":
  st.header("🔍 Data Understanding (Raw Dataset)")
@@ -639,4 +695,62 @@ elif page=="Analysis 8":
 
  **TRADE MARK!**
 
- Productivity is not determined simply by the amount of time spent on social media. Instead, it appears to be the combined result of an individual's work environment, occupation, digital habits and ability to manage distractions. Looking at only one variable provides an incomplete explanation; meaningful insight comes from analysing the relationships between several factors together.""")
+ Productivity is not determined simply by the amount of time spent on social media. Instead, it appears to be the combined result of an individual's work environment, occupation, digital habits and ability to manage distractions. Looking at only one variable provides an incomplete explanation; meaningful insight comes from analysing the relationships between several factors together.
+ """)
+elif page=="Outro":
+ st.title("🎉 Thank You!")
+
+ st.markdown("---")
+
+ st.header("📱 Final Sign-Off")
+
+ st.write(
+  """
+  Over the course of this project we discovered that:
+
+  • Spending more time on social media did not automatically reduce productivity.
+
+  • Focus apps were not the strongest predictor of productivity.
+
+  • Notifications, occupations and other lifestyle factors all contributed to the bigger picture.
+
+  • Most importantly, data can often challenge what we assume to be true.
+
+  Thank you for following our journey!
+  """
+ )
+
+ st.success(
+  "Final Message: Never trust assumptions... trust the data. 📊"
+ )
+
+ st.balloons()
+
+ videoPath=r"C:\Users\user\Documents\Documents\UNI\YEAR1 SEM2\DSA1080\social-media-usage-project\data\images\WhatsApp Video 2026-08-06 at 09.34.08.mp4"
+
+ if os.path.exists(videoPath):
+  st.video(videoPath)
+ else:
+  st.error("Video not found.")
+
+ st.markdown("---")
+
+ st.header("😂 Before You Leave...")
+
+ st.markdown(
+ """
+ ### Statistics prove that...
+
+ We spent:
+ - 10% collecting data
+ - 20% cleaning data
+ - 30% fixing bugs
+ - 40% wondering why Streamlit wasn't updating 😭
+
+ Thanks for watching!
+ """
+ )
+
+ st.snow()
+
+ st.caption("Made with ❤️, Python, Pandas, Streamlit... and a questionable amount of caffeine ☕")
