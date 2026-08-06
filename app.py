@@ -753,6 +753,6 @@ elif page=="Outro":
 
  If not...
 
- Have a fantastic day! 😄
+ Have a fantastic day!
  """
  )
