@@ -137,8 +137,64 @@ st.title("📱 Social Media vs Productivity Analysis")
 st.write("KAZI & BRADLEY: The Best Group Presentation")
 st.markdown("---")
 
-page=st.sidebar.radio("Navigate App",["Data Understanding", "Data Cleaning", "Analysis 1 & 2",
-  "Analysis 3", "Analysis 4", "Analysis 5", "Analysis 6", "Analysis 7", "Analysis 8"])
+page=st.sidebar.radio("Navigate App",["Introduction", "Data Understanding", "Data Cleaning", "Analysis 1 & 2",
+  "Analysis 3", "Analysis 4", "Analysis 5", "Analysis 6", "Analysis 7", "Analysis 8", "Outro"])
+
+if page=="Introduction":
+
+
+
+ st.markdown("---")
+
+ st.header("Project Team")
+
+ col1,col2=st.columns(2)
+
+ with col1:
+  st.image(r"C:\Users\user\Documents\Documents\UNI\YEAR1 SEM2\DSA1080\social-media-usage-project\data\images\Screenshot 2026-08-06 112157.png",width=450)
+  st.write("KAZI KIIRU 202604055")
+
+ with col2:
+  st.image(r"C:\Users\user\Documents\Documents\UNI\YEAR1 SEM2\DSA1080\social-media-usage-project\data\images\WhatsApp Image 2026-08-06 at 09.33.25.jpeg",width=350)
+  st.write("BRADLEY QUEST 676509")
+
+ st.markdown("---")
+
+ st.header("Project Information")
+
+ st.markdown("""
+ **Course:** DSA1080
+
+ **University:** ___USIU____________________
+
+ **Lecturer:** _______AUSTIN ODERO________________
+
+ **Semester:** _________DSA1080______________
+
+ **Project Title:** *Social Media vs Productivity: Does Social Media Really Reduce Productivity?*
+
+ **Submitted By:**
+ - Kazi Kiiru
+ - Bradley Quest
+ """)
+
+ st.markdown("---")
+
+ st.header("Project Overview")
+
+ st.write(
+  """
+  Social media is often blamed for reducing productivity. This project
+  investigates whether time spent on social media is actually associated with
+  lower productivity, or whether other factors such as focus apps,
+  notifications and occupation provide a better explanation.
+
+  Throughout this dashboard we answer eight connected analysis questions,
+  gradually building towards **Kazi's Final Thesis**.
+  """
+ )
+
+ st.info("Use the navigation menu on the left to begin the analysis.")
 
 if page == "Data Understanding":
  st.header("🔍 Data Understanding (Raw Dataset)")
@@ -641,3 +697,62 @@ elif page=="Analysis 8":
 
  Productivity is not determined simply by the amount of time spent on social media. Instead, it appears to be the combined result of an individual's work environment, occupation, digital habits and ability to manage distractions. Looking at only one variable provides an incomplete explanation; meaningful insight comes from analysing the relationships between several factors together.
  """)
+elif page=="Outro":
+ st.title("🎉 LOWKIRKENUINELY PEAK PRESENTATION")
+
+ st.markdown("---")
+
+ st.header("🥀")
+
+ videoOne=r"C:\Users\user\Documents\Documents\UNI\YEAR1 SEM2\DSA1080\social-media-usage-project\data\images\WhatsApp Video 2026-08-06 at 09.34.08.mp4"
+ videoTwo=r"C:\Users\user\Documents\Documents\UNI\YEAR1 SEM2\DSA1080\social-media-usage-project\data\images\WhatsApp Video 2025-01-09 at 12.24.00_4487eead.mp4"
+
+ col1,col2=st.columns(2)
+
+ with col1:
+  if os.path.exists(videoOne):
+   st.video(videoOne)
+  else:
+   st.error("Video 1 not found.")
+
+ with col2:
+  if os.path.exists(videoTwo):
+   st.video(videoTwo)
+  else:
+   st.error("Video 2 not found.")
+   st.markdown("---")
+
+ st.success(
+  "🎉 Congratulations! You have officially survived our presentation."
+ )
+
+ st.markdown(
+ """
+ ## Final Statistics
+
+ 📊 Data Collected: ✔️
+
+ 🧹 Data Cleaned: ✔️
+
+ 📈 Data Analysed: ✔️
+
+ 😭 Streamlit Bugs Fixed: Approximately 437
+
+ ☕ Cups of Coffee Consumed: Too many to count.
+ """
+ )
+
+ st.balloons()
+ st.snow()
+
+ st.markdown("# 🎓 Thank You!")
+
+ st.markdown(
+ """
+ ### Questions?
+
+ If not...
+
+ Have a fantastic day! 😄
+ """
+ )
